@@ -3,7 +3,7 @@ import CoreData
 
 class NoteDetailVC: UIViewController {
     @IBOutlet weak var titleTF: UITextField!
-    @IBOutlet weak var descriptionTF: UITextView!
+    @IBOutlet weak var descTV: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +16,7 @@ class NoteDetailVC: UIViewController {
         let newNote = Note(entity: entity!, insertInto: context)
         newNote.id = noteList.count as NSNumber
         newNote.title = titleTF.text
-        newNote.desc = titleTF.text
+        newNote.desc = descTV.text
         
         do{
             try context.save()

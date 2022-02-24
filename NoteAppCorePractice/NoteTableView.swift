@@ -11,7 +11,7 @@ class NoteTableView: UITableViewController {
         thisNote = noteList[indexPath.row]
         
         noteCell.titleLabel.text = thisNote.title
-        noteCell.descriptionLabel.text = thisNote.desc
+        noteCell.descLabel.text = thisNote.desc
         
         return noteCell
     }
